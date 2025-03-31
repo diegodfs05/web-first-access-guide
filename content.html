@@ -1,0 +1,112 @@
+<link href="/styles.css" rel="stylesheet" />
+<div class="w-100 d-none align-items-center espaco-logado" style="background:#eef2fa; height: 75px; opacity:.5; border-radius: .25rem; border: solid .0625rem #89a7e0;">
+  <div class="container">
+    <p class="text-center" style="color:#2e5aac;margin-bottom:0px;font-size:14px;">Espaço destinado ao guia de primeiro acesso. Visitantes do site não visualizam este alerta.</p>
+  </div>
+</div>
+<style type="text/css">
+  body.signed-in .espaco-logado {display: flex!important; margin-bottom:16px}
+</style>
+<script>
+let messages = [
+    {
+        title: "Novo portal de Relação com Cooperados do Sicoob",
+        text: "Preparamos um guia para te mostrar tudo o que você pode encontrar por aqui. Vamos começar?",
+        btn1: {
+            text: "Fechar",
+            action: 'closePres()'
+        },
+        btn2: {
+            text: 'Vamos lá!',
+            action: 'createMessage(1)'
+        },
+        queryIdentifier: '',
+        javascript: ''
+    },
+    {
+        title: "Menu do site",
+        text: 'Passando o cursor sobre o menu <b>O Sicoob</b>, você visualiza as opções de páginas para navegação',
+        btn1: {
+            text: "anterior",
+            action: 'createMessage(0)'
+        },
+        btn2: {
+            text: 'próximo',
+            action: 'createMessage(2)'
+        },
+        queryIdentifier: '#layout_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_aZJk4l8eCmT2_224760129 .dropdown-menu',
+        javascript: '(document.querySelector("#layout_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_aZJk4l8eCmT2_224760129")).classList.add("open")'
+    },
+    {
+        title: "Menu do Site",
+        text: 'Na página de <b>Publicações</b>, você encontra o acervo de publicações sistêmicas do Banco Sicoob: relatórios de ouvidoria, demonstrações financeiras, entre outros',
+        btn1: {
+            text: "anterior",
+            action: 'createMessage(1)'
+        },
+        btn2: {
+            text: 'próximo',
+            action: 'createMessage(3)'
+        },
+        queryIdentifier: '#layout_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_aZJk4l8eCmT2_224760135',
+        javascript: '(document.querySelector("#layout_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_aZJk4l8eCmT2_224760129")).classList.remove("open")'
+    },
+    {
+        title: "Menu do Site",
+        text: "Na página <b>Sustentabilidade</b> você encontra as principais ações e relatórios de sustentabilidade e cidadania financeira",
+        btn1: {
+            text: "anterior",
+            action: 'createMessage(2)'
+        },
+        btn2: {
+            text: 'próximo',
+            action: 'createMessage(4)'
+        },
+        queryIdentifier: '#layout_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_aZJk4l8eCmT2_224760136',
+        javascript: ''
+    },
+    {
+        title: "Acesso Rápido",
+        text: "No Acesso Rápido você encontra atalhos para as principais páginas: <ul><li>Governança Corporativa</li><li>Publicações sistêmicas do Sicoob</li><li>Distribuidora de Títulos e Valores Mobiliários (Sicoob DTVM)</li><li>Sustentabilidade e Cidadania Financeira</li></ul>",
+        btn1: {
+            text: "anterior",
+            action: 'createMessage(3)'
+        },
+        btn2: {
+            text: 'próximo',
+            action: 'createMessage(5)'
+        },
+        queryIdentifier: '#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_RqhgqktrUA3b',
+        javascript: '(document.querySelector("#portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_RqhgqktrUA3b")).style.backgroundColor = "#ffffff";'
+    },
+    {
+        title: "Últimas Atualizações",
+        text: "No quadro <b>Últimas Atualizações</b> você tem acesso aos últimos documentos publicados no portal",
+        btn1: {
+            text: "anterior",
+            action: 'createMessage(4)'
+        },
+        btn2: {
+            text: 'próximo',
+            action: 'createMessage(6)'
+        },
+        queryIdentifier: '#portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_4QpvG1y3DW7R',
+        javascript: '(document.querySelector("#portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_4QpvG1y3DW7R")).style.backgroundColor = "#ffffff";'
+    },
+    {
+        title: "Publicações em Destaque",
+        text: "No quadro <b>Publicações em Destaque</b> são mostrados os documentos mais acessados do portal",
+        btn1: {
+            text: "anterior",
+            action: 'createMessage(5)'
+        },
+        btn2: {
+            text: 'fechar',
+            action: 'closePres()'
+        },
+        queryIdentifier: '#portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_tIKLKOEuGqot',
+        javascript: '(document.querySelector("#portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_tIKLKOEuGqot")).style.backgroundColor = "#ffffff";'
+    },
+];
+</script>
+<script src="/script.js"></script>
